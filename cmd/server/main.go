@@ -1,4 +1,4 @@
-﻿package main
+package main
 
 import (
 	"github.com/milad-ghaderi-dev/gridpulse/db"
@@ -31,7 +31,7 @@ func main() {
 	}
 	dbPath := os.Getenv("DB_PATH")
 	if dbPath == "" {
-		dbPath = "gopower.db"
+		dbPath = "gridpulse.db"
 	}
 
 	// 3. Database Initialization

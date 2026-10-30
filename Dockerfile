@@ -21,8 +21,12 @@ WORKDIR /app
 
 RUN apk add --no-cache ca-certificates sqlite-libs
 
-# Create non-root user for enterprise security
-RUN addgroup -S appgroup && adduser -S appuser -G appgroup
+# Create data directory and non-root user with correct permissions for SQLite
+RUN mkdir -p /app/data \
+    && addgroup -S appgroup \
+    && adduser -S appuser -G appgroup \
+    && chown -R appuser:appgroup /app
+
 USER appuser
 
 COPY --from=builder /app/bin/gridpulse /app/gridpulse
