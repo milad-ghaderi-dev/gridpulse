@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  gridpulse:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: gridpulse-service
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - DB_PATH=/app/data/gridpulse.db
+    volumes:
+      - gridpulse-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  gridpulse-data:
