@@ -1,4 +1,4 @@
-﻿package db
+package db
 
 import (
 	"github.com/milad-ghaderi-dev/gridpulse/models"

@@ -1,4 +1,4 @@
-﻿package models
+package models
 
 import "time"
 
@@ -75,4 +75,3 @@ func (s *PowerStation) Validate() error {
 
 	return nil
 }
-

@@ -1,10 +1,10 @@
-﻿package models
+package models
 
 import "time"
 
 type GridAlert struct {
-	Type      string    `json:"type"`      // ALWAYS "ALERT"
-	Severity  string    `json:"severity"`  // "INFO", "WARNING", "CRITICAL"
+	Type      string    `json:"type"`     // ALWAYS "ALERT"
+	Severity  string    `json:"severity"` // "INFO", "WARNING", "CRITICAL"
 	Message   string    `json:"message"`
 	Timestamp time.Time `json:"timestamp"`
 }

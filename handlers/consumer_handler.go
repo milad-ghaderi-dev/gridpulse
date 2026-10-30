@@ -1,4 +1,4 @@
-﻿package handlers
+package handlers
 
 import (
 	"github.com/milad-ghaderi-dev/gridpulse/models"
@@ -44,7 +44,7 @@ func GetConsumerByID(repo repository.ConsumerRepository) gin.HandlerFunc {
 		if err != nil {
 			if err == models.ErrConsumerNotFound {
 				c.JSON(http.StatusNotFound, gin.H{"error": err.Error()})
-				return 
+				return
 			}
 			c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 			return

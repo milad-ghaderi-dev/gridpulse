@@ -1,4 +1,4 @@
-﻿package handlers
+package handlers
 
 import (
 	"github.com/milad-ghaderi-dev/gridpulse/models"
@@ -45,7 +45,7 @@ func GetStationByID(repo repository.StationRepository) gin.HandlerFunc {
 		if err != nil {
 			if err == models.ErrStationNotFound {
 				c.JSON(http.StatusNotFound, gin.H{"error": err.Error()})
-				return 
+				return
 			}
 			c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 			return

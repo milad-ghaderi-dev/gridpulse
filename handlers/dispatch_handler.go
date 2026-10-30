@@ -1,4 +1,4 @@
-﻿package handlers
+package handlers
 
 import (
 	"github.com/milad-ghaderi-dev/gridpulse/models"

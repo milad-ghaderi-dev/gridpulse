@@ -1,4 +1,4 @@
-﻿package service
+package service
 
 import (
 	"github.com/milad-ghaderi-dev/gridpulse/models"

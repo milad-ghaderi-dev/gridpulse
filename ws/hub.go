@@ -1,8 +1,8 @@
-﻿package ws
+package ws
 
 import (
-	"github.com/milad-ghaderi-dev/gridpulse/models"
 	"encoding/json"
+	"github.com/milad-ghaderi-dev/gridpulse/models"
 	"sync"
 	"time"
 )
